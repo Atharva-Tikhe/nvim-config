@@ -4,10 +4,12 @@ vim.g.mapleader = ","
 
 -- Source mapping 
 vim.keymap.set('n', '<leader>sv', ':w<CR> :source $MYVIMRC<CR>')
+vim.keymap.set('n', '<leader>w', ':w<CR>')
+vim.keymap.set('n', '<leader>wq', ':wq<CR>')
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
-vim.opt.shiftwidth = 4 
+vim.opt.shiftwidth = 4
 -- Set window switching mappings
 
 vim.keymap.set('n', '<leader>h', '<c-w>h', {desc = 'switch to left window'})
