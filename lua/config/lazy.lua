@@ -33,7 +33,19 @@ require("lazy").setup({
 										require("lspconfig")[server_name].setup {}
 								end,
 						}
+								require"lspconfig".pylsp.setup {
+
+										ignore = {"W191", "E231", "E251"}
+								}
 				end
+		},
+		{ 'nvim-tree/nvim-web-devicons',
+				config = function()
+						require("nvim-web-devicons").setup()
+				end,
+		},
+		{
+				'tpope/vim-fugitive',
 		},
     { import = "config.plugins" },
   },
