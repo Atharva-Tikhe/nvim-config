@@ -16,7 +16,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
--- Setup lazy.nvim
 require("lazy").setup({
   spec = {
     -- import your plugins
@@ -39,10 +38,10 @@ require("lazy").setup({
 								}
 				end
 		},
-		{ 'nvim-tree/nvim-web-devicons',
-				config = function()
-						require("nvim-web-devicons").setup()
-				end,
+		{ 'nvim-tree/nvim-web-devicons', lazy = true
+				-- config = function()
+				-- 		require("nvim-web-devicons").setup()
+				-- end,
 		},
 		{
 				'tpope/vim-fugitive',
@@ -51,8 +50,8 @@ require("lazy").setup({
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
+  -- install = { colorscheme = { "habamax" } },
   -- automatically check for plugin updates
-  checker = { enabled = true },
-	vim.cmd[[colorscheme habamax]]
+  checker = { enabled = true , notify = false },
+	-- vim.cmd[[colorscheme habamax]]
 })

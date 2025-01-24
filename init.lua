@@ -1,5 +1,5 @@
 
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 vim.g.mapleader = ","
 -- Source mapping 
 vim.keymap.set('n', '<leader>sv', ':w<CR> :source $MYVIMRC<CR>')
