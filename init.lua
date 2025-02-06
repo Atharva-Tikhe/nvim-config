@@ -22,7 +22,6 @@ vim.keymap.set('n', '<leader>j', '<c-w>j', {desc = 'switch to bottom window'})
 vim.keymap.set('n', '<leader>k', '<c-w>k', {desc = 'switch to up window'})
 vim.keymap.set('n', '<leader>l', '<c-w>l', {desc = 'switch to right window'})
 
-
 -- Set tab switching mappings
 vim.keymap.set('n', 'te', ":tabe ")
 vim.keymap.set('n', 'nt', ":tabn<cr>")
@@ -32,10 +31,32 @@ vim.keymap.set('i', '<leader>pt', "<ESC>:tabp<cr>")
 vim.keymap.set('n', 'e', ":e ")
 vim.keymap.set('i', 'ii', "<ESC>")
 
-
-
 -- macros
 vim.keymap.set('n', '<leader>tp', 'ma0wiprint(A)`a6l')
-vim.keymap.set('n', '<leader>r', ':!python3 % <CR>')
+vim.keymap.set('n', '<leader>s', [[ msA`s ]] )
+vim.keymap.set('n', '<leader>t', [[ mtA;`thh ]] )
+
+
+vim.api.nvim_create_autocmd("FileType", {
+
+		pattern = "python",
+		callback = function()
+				vim.keymap.set("n", "<leader>r", ":w <CR> :!python3 % <CR>")
+		end,
+
+})
+
+
+
+vim.api.nvim_create_autocmd("FileType", {
+
+		pattern = "cpp",
+		callback = function()
+				vim.keymap.set("n", "<leader>r", ":w <CR> :!make SOURCE_FILE=% out<CR>")
+		end,
+
+})
+
+
 
 require('config.lazy')
