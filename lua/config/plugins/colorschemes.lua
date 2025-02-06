@@ -5,9 +5,9 @@ return {
 		config = function()
 				require('onedark').setup {
 						style = "darker",
-						code_style = {
-								functions = 'bold'
-						}
+						-- code_style = {
+						-- 		functions = 'bold'
+						-- }
 				}
 				vim.cmd([[colorscheme onedark]])
 		end

@@ -19,25 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- import your plugins
-		{ 'williamboman/mason.nvim',
-				config = function()
-						require('mason').setup()
-				end
-		},
-		{ 'williamboman/mason-lspconfig.nvim',
-				config = function()
-						require('mason-lspconfig').setup()
-						require('mason-lspconfig').setup_handlers {
-								function (server_name)
-										require("lspconfig")[server_name].setup {}
-								end,
-						}
-								require"lspconfig".pylsp.setup {
-
-										ignore = {"W191", "E231", "E251"}
-								}
-				end
-		},
 		{ 'nvim-tree/nvim-web-devicons', lazy = true
 				-- config = function()
 				-- 		require("nvim-web-devicons").setup()
