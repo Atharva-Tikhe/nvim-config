@@ -1,8 +1,8 @@
 
 -- tabs
-vim.keymap.set('n', "<leader>tn", ":tabn<CR>", {noremap = true})
-vim.keymap.set('n', "<leader>tp", ":tabp<CR>", {noremap = true})
-vim.keymap.set('n', "<leader>te", ":tabe ", {noremap = true})
+vim.keymap.set('n', "nt", ":tabn<CR>", {noremap = true})
+vim.keymap.set('n', "pt", ":tabp<CR>", {noremap = true})
+vim.keymap.set('n', "te", ":tabe ", {noremap = true})
 
 -- Telescope keymaps
 local builtin = require("telescope.builtin")
