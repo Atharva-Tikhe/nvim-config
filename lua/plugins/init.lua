@@ -11,4 +11,7 @@ require("lazy").setup({
 	{ import = "plugins.lsp" },
 	{ import = "plugins.linting" },
 	{ import = "plugins.formatting" },
+
+	{ import = "plugins.treesitter" },
+  
 })

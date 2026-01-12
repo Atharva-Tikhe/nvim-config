@@ -6,7 +6,7 @@ return {
       format_on_save = true,
       formatters_by_ft = {
         python = { "black" },
-        r = { "styler" },
+        --r = { "styler" },
         sh = { "shfmt" },
       }
     }
