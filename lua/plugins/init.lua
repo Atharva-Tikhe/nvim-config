@@ -13,5 +13,7 @@ require("lazy").setup({
 	{ import = "plugins.formatting" },
 
 	{ import = "plugins.treesitter" },
+	{ import = "plugins.telescope" },
+	{ import = "plugins.editing" },
   
 })
