@@ -12,6 +12,10 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, opts )
 vim.keymap.set("n", "<leader>fb", builtin.buffers, opts )
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, opts )
 
+vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, opts)
+vim.keymap.set("n", "<leader>ws", builtin.lsp_workspace_symbols, opts)
+vim.keymap.set("n", "<leader>di", builtin.diagnostics, opts)
+
 -- ToggleTerm
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", opts)
 vim.keymap.set("t", "<leader>tt", "<cmd>ToggleTerm<CR>", opts)
