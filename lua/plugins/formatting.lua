@@ -8,6 +8,7 @@ return {
         python = { "black" },
         --r = { "styler" },
         sh = { "shfmt" },
+        html = { "prettier" },
       }
     }
   }

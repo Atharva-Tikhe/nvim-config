@@ -29,10 +29,12 @@ return {
       vim.lsp.config.pyright = { capabilities = capabilities, }
       vim.lsp.config.r_language_server = { capabilities = capabilities, }
       vim.lsp.config.bashls = { capabilities = capabilities, }
+      vim.lsp.config.html_lsp = {capabilities = capabilities, }
       vim.lsp.enable({
         "pyright",
         "r_language_server",
         "bashls",
+        "html_lsp",
       })
 
    end,
