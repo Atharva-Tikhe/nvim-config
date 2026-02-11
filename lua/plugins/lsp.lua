@@ -35,6 +35,7 @@ return {
         "r_language_server",
         "bashls",
         "html_lsp",
+        "rust_analyser"
       })
 
    end,
